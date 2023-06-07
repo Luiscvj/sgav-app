@@ -18,7 +18,7 @@ include_once 'app.php';
 <form id="myFormHouse">
     <label value="tipo de casa"> Nombre</label>
     <input type="text" name="name_house_type">
-    <input tupe="submit" value="Enviar">
+    <input type="submit" value="Enviar">
 </form>
 
 </body>

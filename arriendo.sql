@@ -1,7 +1,7 @@
 CREATE TABLE 
     housetype(
 
-        id_house_type INT(11) NOT NULL UNIQUE,
+        id_house_type INT(11) NOT NULL  AUTO_INCREMENT UNIQUE,
         name_house_type VARCHAR(50),
         CONSTRAINT PK_id_house_type PRIMARY KEY(id_house_type)
     );
@@ -38,7 +38,7 @@ CREATE TABLE
         id_person INT(11)  NOT NULL AUTO_INCREMENT UNIQUE,
         firstname_person VARCHAR(100) NOT NULL,
         lastname_person  VARCHAR(100) NOT NULL,
-        birthdate_peroson DATE,
+        birthdate_person DATE,
         id_city INT,
         CONSTRAINT PK_id_person PRIMARY KEY(id_person),
         CONSTRAINT FK_person_id_city FOREIGN KEY(id_city) REFERENCES cities(id_city)
@@ -64,3 +64,4 @@ CREATE TABLE
         CONSTRAINT FK_living_id_city FOREIGN KEY(id_city) REFERENCES cities(id_city),
         CONSTRAINT FK_living_id_house_type FOREIGN KEY(id_house_type) REFERENCES housetype(id_house_type)
     );
+

@@ -7,13 +7,14 @@ class HouseType{
     protected $name_house_type;
 
     public function  __construct($args=[]){
-        $this->id_house_type = $args['id_house_type'];
-        $this->name_house_type =$args['name_house_type'];
+       /*  $this->id_house_type = $args['id_house_type'];
+        $this->name_house_type =$args['name_house_type']; */
  }
 
  public function postDataHouse($data){
     $delimiter =':';
-    $valCols = $delimiter . join(',:',array_keys(data));
+ 
+    $valCols = $delimiter . join(',:',array_keys($data));
     $cols = join(',', array_keys($data));
     $sql = "INSERT INTO housetype($cols) VALUES ($valCols)";
     $stmt = self::$conn->prepare($sql);
@@ -22,7 +23,7 @@ class HouseType{
 
 
  public static function setConn($connDB){
-        self::$conn->$connDB;
+        self::$conn = $connDB;
  }
 }
 
