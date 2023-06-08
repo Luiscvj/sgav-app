@@ -1,3 +1,4 @@
+-- Active: 1686223747605@@localhost@3306@arriendo
 CREATE TABLE 
     housetype(
 
@@ -65,3 +66,4 @@ CREATE TABLE
         CONSTRAINT FK_living_id_house_type FOREIGN KEY(id_house_type) REFERENCES housetype(id_house_type)
     );
 
+SELECT * FROM countries;

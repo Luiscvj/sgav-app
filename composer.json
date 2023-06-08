@@ -1,6 +1,6 @@
 {
-    "name": "apolm01-012/app-php-my-sql-repaso",
-    "description": "Conexion a mi base de datos CON PDO y PHP",
+    "name": "apolm01-012/app-php-mysql-repaso",
+    "description": "Conexion con php y mysql",
     "type": "project",
     "authors": [
         {

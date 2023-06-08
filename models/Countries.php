@@ -25,6 +25,14 @@ class Countries{
 
 
     }
+    public function getDataCountries(){
+
+        $sql = "SELECT * FROM countries";
+        $stmt = self::$conn->prepare($sql);
+        $stmt->execute();
+        $clientes = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $clientes;
+    }
 
     public static function setConnCountry($conDB){
         self::$conn = $conDB;

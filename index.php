@@ -1,6 +1,12 @@
 <?php
 
 include_once 'app.php';
+use Clases\Countries;
+
+$obj = new Countries();
+
+$data = $obj->getDataCountries();
+print_r($data);
 
 ?>
 <!DOCTYPE html>
@@ -85,5 +91,39 @@ include_once 'app.php';
 
 <!-- //////////////////////////////////////////////////////////////////////////// -->
 
+
+<!-- SECCION REGIONS///////////////////////////////////////////////////////// -->
+<div id="containerFormRegions" ">
+    <div class="card" style="width: 20rem;">   
+        <div class="card-body">           
+            <form id="myFormCountries" class="row g-3">
+                <div class="col">            
+                            <div>
+                                <label value="tipo de casa" class="form-label"> Nombre de la Region</label>
+                                <input type="text" class="form-control" name="name_region">     
+                                
+                                
+
+                                
+                            </div>
+                                  
+                            <div class="col">
+
+                            <select class="form-select" aria-label="Default select example">
+                                  <option selected>Seleccione el pais</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                            </select>
+
+                            </div>
+                            <input type="submit"  class="btn btn-primary btnSubmit" value="Enviar">
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
 </body>
 </html>

@@ -7,8 +7,8 @@ class Database{
         "mysql" => [
             "driver"=>"mysql",
             "host"=>"localhost",
-            "username"=>"root",
-            "password"=>"123456",
+            "username"=>"campus",
+            "password"=>"campus2023",
             "database"=> "arriendo",
             "charset"=> "utf8mb4",
             "collate"=>"utf8mb4_unicode__ci",
