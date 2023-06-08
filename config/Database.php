@@ -7,8 +7,8 @@ class Database{
         "mysql" => [
             "driver"=>"mysql",
             "host"=>"localhost",
-            "username"=>"campus",
-            "password"=>"campus2023",
+            "username"=>"root",
+            "password"=>"123456",
             "database"=> "arriendo",
             "charset"=> "utf8mb4",
             "collate"=>"utf8mb4_unicode__ci",
@@ -35,7 +35,7 @@ class Database{
                 $dsn ="{$db['driver']}:host={$db['host']};dbname={$db['database']}";
 
                 try{
-                  
+              
                     $this->conn  = new \PDO($dsn,$db['username'],$db['password'],$db['flags']);
                     echo 'ok';
                 }catch(\PDOException $e){
